@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "chai": "^6.0.1",
+    "chai": "^4.3.10",
     "mocha": "^11.7.2"
   },
   "name": "gerenciar-usuarios",
@@ -10,7 +10,6 @@
   "directories": {
     "test": "test"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "mocha"
   },
