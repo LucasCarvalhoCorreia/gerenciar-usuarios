@@ -4,7 +4,7 @@ const { adicionarNovoUsuario } = require('../src/gerenciarUsuarios');
 //Faz as comparações
 const { expect } = require('chai');
 
-describe('Testes de adição de novos nomes de usuário', function () {
+describe('Testar as funções de Gestão de Usuários', function () {
 
     it('Validar se um novo usuário foi adicionado corretamente', function () {
         adicionarNovoUsuario('Murilo');
