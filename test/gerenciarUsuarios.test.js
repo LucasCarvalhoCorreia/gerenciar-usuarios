@@ -7,16 +7,20 @@ const { expect } = require('chai');
 describe('Testar as funções de Gestão de Usuários', function () {
 
     it('Validar se um novo usuário foi adicionado corretamente', function () {
-        adicionarNovoUsuario('Murilo');
+        adicionarNovoUsuario({
+            nome: 'Murilo',
+            email: 'murilo.reis@hotmail.com'
+        });
 
         const listaDeUsuarios = retornarUsuarios();
-        
-        expect(listaDeUsuarios.at(-1)).to.equal('Murilo');
+
+        expect(listaDeUsuarios.at(-1).nome).to.equal('Murilo');
+        expect(listaDeUsuarios.at(-1).email).to.equal('murilo.reis@hotmail.com');
     });
 
     it('Validar se a lista de usuários é retornada corretamente', function () {
         const listaDeUsuarios = retornarUsuarios();
         
-        expect(listaDeUsuarios.length).to.be.greaterThan(0);
+        expect(listaDeUsuarios.length).to.be.equal(5);
     });
 });
